@@ -6,7 +6,7 @@ services:
     image: linuxserver/wikijs
     container_name: wikijs
     ports:
-      - 4010:3000
+      - ${http_port}:3000
     environment:
       - PUID=1000
       - PGID=1000
