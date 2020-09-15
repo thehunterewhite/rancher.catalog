@@ -11,5 +11,5 @@
       - PGID=1000
       - TZ="America/New_York"
     volumes:
-      - /home/docker-data//heimdall:/config
+      - /home/docker-data/heimdall:/config
     restart: unless-stopped
