@@ -1,0 +1,45 @@
+version: '2'
+catalog:
+  name: "ombi"
+  version: "PLACEHOLDER"
+  description: "PLACEHOLDER"
+  uuid: ombi-0
+  minimum_rancher_version: v0.56.0
+  questions:
+    - variable: http_port
+      description: "Public HTTP port to access ombi's webui."
+      label: "HTTP Port"
+      required: true
+      default: "3000"
+      type: "int"
+    - variable: https_port
+      description: "Public HTTP port to access ombi's webui."
+      label: "HTTP Port"
+      required: true
+      default: "3000"
+      type: "int"
+    - variable: "volume_driver"
+      description: "Volume driver to associate with this service."
+      label: "Volume Driver"
+      required: true
+      default: "local"
+      type: enum
+      options: # List of options if using type of `enum`
+        - local
+        - rancher-nfs
+        - rancher-efs
+        - rancher-ebs
+services:
+  ombi:
+    scale: 1
+    retain_ip: true
+    health_check:
+      response_timeout: 2000
+      healthy_threshold: 2
+      port: 3000
+      unhealthy_threshold: 3
+      initializing_timeout: 300000
+      interval: 2000
+      strategy: recreate
+      request_line: GET "/" "HTTP/1.0"
+      reinitializing_timeout: 120000
