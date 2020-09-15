@@ -1,0 +1,5 @@
+name: Organizr
+description: |
+    An HTPC/Homelab services organizer that is written in PHP
+version: v2.0
+category: RSS
