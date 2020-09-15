@@ -1,0 +1,5 @@
+name: FreshRSS
+description: |
+    A self-hosted RSS feed aggregator
+version: v1.16.2
+category: RSS
