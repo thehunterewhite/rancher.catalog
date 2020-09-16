@@ -12,12 +12,6 @@ catalog:
       required: true
       default: "3000"
       type: "int"
-    - variable: https_port
-      description: "Public HTTPS port to access heimdall's webui."
-      label: "HTTPS Port"
-      required: true
-      default: "3000"
-      type: "int"
     - variable: "volume_driver"
       description: "Volume driver to associate with this service."
       label: "Volume Driver"

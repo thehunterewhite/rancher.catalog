@@ -6,7 +6,6 @@ services:
 
     ports:
       - ${http_port}:80
-      - ${https_port}:443
 
     environment:
       - PUID=1000
