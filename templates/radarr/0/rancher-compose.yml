@@ -1,13 +1,19 @@
 version: '2'
 catalog:
-  name: "organizr"
-  version: "v2.0"
-  description: "An HTPC/Homelab services organizer that is written in PHP"
-  uuid: organizr-0
+  name: "radarr"
+  version: "PLACEHOLDER"
+  description: "PLACEHOLDER"
+  uuid: radarr-0
   minimum_rancher_version: v0.56.0
   questions:
     - variable: http_port
-      description: "Public HTTP port to access organizr's webui."
+      description: "Public HTTP port to access radarr's webui."
+      label: "HTTP Port"
+      required: true
+      default: "3000"
+      type: "int"
+    - variable: https_port
+      description: "Public HTTP port to access radarr's webui."
       label: "HTTP Port"
       required: true
       default: "3000"
@@ -24,7 +30,7 @@ catalog:
         - rancher-efs
         - rancher-ebs
 services:
-  organizr:
+  radarr:
     scale: 1
     retain_ip: true
 #    health_check:

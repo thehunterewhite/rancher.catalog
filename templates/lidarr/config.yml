@@ -1,0 +1,5 @@
+name: Lidarr
+description: |
+    Looks and smells like Sonarr but made for music
+version: v0.7.1.1801-ls19
+category: Indexers

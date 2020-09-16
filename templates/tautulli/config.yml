@@ -1,0 +1,5 @@
+name: Tautulli
+description: |
+    A Python based monitoring and tracking tool for Plex Media Server
+version: v02658759-ls14
+category: Media
