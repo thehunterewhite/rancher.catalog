@@ -4,12 +4,16 @@ services:
   organizr:
     image: linuxserver/organizr
     container_name: organizr
+
     ports:
       - ${http_port}:80
+
     environment:
       - PUID=1000
       - PGID=1000
       - TZ="America/New_York"
+
     volumes:
-      - /home/docker-data/organizr:/config
+      - /home/organizr:/config
+
     restart: unless-stopped

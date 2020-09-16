@@ -3,6 +3,7 @@ version: "2"
 services:
   wikijs:
     image: linuxserver/wikijs
+    container_name: wikijs
 
     ports:
       - ${http_port}:3000
