@@ -1,9 +1,9 @@
-  tautulli:
-    image: linuxserver/tautulli
-    container_name: tautulli
+  ombi:
+    image: linuxserver/ombi
+    container_name: ombi
 
     ports:
-      - ${http_port}:8181
+      - ${http_port}:3579
 
     environment:
       - PUID=1000
@@ -11,7 +11,6 @@
       - TZ="America/New_York"
 
     volumes:
-      - /home/tautulli:/config
-      - /home/tautulli/logs:/logs
+     - /home/ombi:/config
 
     restart: unless-stopped
