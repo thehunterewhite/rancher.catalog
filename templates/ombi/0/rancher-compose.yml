@@ -1,18 +1,12 @@
 version: '2'
 catalog:
   name: "ombi"
-  version: "PLACEHOLDER"
-  description: "PLACEHOLDER"
+  version: "v3.0.5202-ls68"
+  description: "Want a Movie or TV Show on Plex or Emby? Use Ombi!"
   uuid: ombi-0
   minimum_rancher_version: v0.56.0
   questions:
     - variable: http_port
-      description: "Public HTTP port to access ombi's webui."
-      label: "HTTP Port"
-      required: true
-      default: "3000"
-      type: "int"
-    - variable: https_port
       description: "Public HTTP port to access ombi's webui."
       label: "HTTP Port"
       required: true
