@@ -1,18 +1,12 @@
 version: '2'
 catalog:
   name: "tautulli"
-  version: "PLACEHOLDER"
-  description: "PLACEHOLDER"
+  version: "v02658759-ls14"
+  description: "A Python based monitoring and tracking tool for Plex Media Server"
   uuid: tautulli-0
   minimum_rancher_version: v0.56.0
   questions:
     - variable: http_port
-      description: "Public HTTP port to access tautulli's webui."
-      label: "HTTP Port"
-      required: true
-      default: "3000"
-      type: "int"
-    - variable: https_port
       description: "Public HTTP port to access tautulli's webui."
       label: "HTTP Port"
       required: true
