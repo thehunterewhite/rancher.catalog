@@ -1,18 +1,12 @@
 version: '2'
 catalog:
   name: "hydra2"
-  version: "PLACEHOLDER"
-  description: "PLACEHOLDER"
+  version: "v2.19.6-ls69"
+  description: "Usenet meta search"
   uuid: hydra2-0
   minimum_rancher_version: v0.56.0
   questions:
     - variable: http_port
-      description: "Public HTTP port to access hydra2's webui."
-      label: "HTTP Port"
-      required: true
-      default: "3000"
-      type: "int"
-    - variable: https_port
       description: "Public HTTP port to access hydra2's webui."
       label: "HTTP Port"
       required: true
