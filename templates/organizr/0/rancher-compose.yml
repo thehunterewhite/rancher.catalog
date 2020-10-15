@@ -1,7 +1,7 @@
 version: '2'
 catalog:
   name: "organizr"
-  version: "v2.0"
+  version: "v1.8"
   description: "An HTPC/Homelab services organizer that is written in PHP"
   uuid: organizr-0
   minimum_rancher_version: v0.56.0

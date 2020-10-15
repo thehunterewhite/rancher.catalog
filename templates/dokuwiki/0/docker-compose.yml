@@ -1,0 +1,43 @@
+---
+version: "2.1"
+services:
+  dokuwiki:
+    image: linuxserver/dokuwiki
+    container_name: dokuwiki
+
+    ports:
+      - ${http_port}:80
+      - ${https_port}:443 #optional
+
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ="America/New_York"
+
+    volumes:
+      - /home/dokuwiki:/config
+
+    restart: unless-stopped
+
+
+  mariadb:
+    image: linuxserver/mariadb
+    container_name: mariadb
+
+    ports:
+      - ${db_port}:3306
+
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - MYSQL_ROOT_PASSWORD=ROOT_ACCESS_PASSWORD
+      - TZ="America/New_York"
+      - MYSQL_DATABASE=USER_DB_NAME #optional
+      - MYSQL_USER=MYSQL_USER #optional
+      - MYSQL_PASSWORD=DATABASE_PASSWORD #optional
+      - REMOTE_SQL=http://URL1/your.sql,https://URL2/your.sql #optional
+
+    volumes:
+      - /home/mariadb:/config
+
+    restart: unless-stopped

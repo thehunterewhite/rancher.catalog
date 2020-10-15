@@ -1,22 +1,22 @@
 version: '2'
 catalog:
-  name: "radarr"
-  version: "PLACEHOLDER"
-  description: "PLACEHOLDER"
-  uuid: radarr-0
+  name: "caddy"
+  version: "v1.16.2"
+  description: "A self-hosted RSS feed aggregator"
+  uuid: caddy-0
   minimum_rancher_version: v0.56.0
   questions:
     - variable: http_port
-      description: "Public HTTP port to access radarr's webui."
+      description: "Public HTTP port to access Caddy's webui."
       label: "HTTP Port"
       required: true
-      default: "3000"
+      default: "80"
       type: "int"
     - variable: https_port
-      description: "Public HTTP port to access radarr's webui."
-      label: "HTTP Port"
+      description: "Public HTTPS port to access Caddy's webui."
+      label: "HTTPS Port"
       required: true
-      default: "3000"
+      default: "443"
       type: "int"
     - variable: "volume_driver"
       description: "Volume driver to associate with this service."
@@ -30,16 +30,16 @@ catalog:
         - rancher-efs
         - rancher-ebs
 services:
-  radarr:
+  Caddy:
     scale: 1
     retain_ip: true
-#    health_check:
-#      response_timeout: 2000
-#      healthy_threshold: 2
-#      port: 3000
-#      unhealthy_threshold: 3
-#      initializing_timeout: 300000
-#      interval: 2000
-#      strategy: recreate
-#      request_line: GET "/" "HTTP/1.0"
-#      reinitializing_timeout: 120000
+    health_check:
+      response_timeout: 2000
+      healthy_threshold: 2
+      port: 3000
+      unhealthy_threshold: 3
+      initializing_timeout: 300000
+      interval: 2000
+      strategy: recreate
+      request_line: GET "/" "HTTP/1.0"
+      reinitializing_timeout: 120000

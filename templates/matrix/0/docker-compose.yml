@@ -1,0 +1,52 @@
+---
+version: "2"
+services:
+  postgres:
+    image: postgres:9.6.4
+    container_name: postgres
+
+    networks:
+      - default
+
+    environment:
+     - ${POSTGRES_PASSWORD}=SECRET
+     - ${POSTGRES_USER}=synapse
+
+    labels:
+      - "traefik.enable=false"
+
+    restart: unless-stopped
+
+
+  synapse:
+    image: matrixdotorg/synapse:latest
+    container_name: matrix
+    depends_on:
+      - postgres
+
+    networks:
+      - web
+      - default
+
+    ports:
+     # Coturn
+     - ${http_port}:3478
+     - ${https_port}:5349
+
+    labels:
+      - "traefik.backend=synapse"
+      - "traefik.enable=true"
+      - "traefik.frontend=true"
+      - "traefik.port=8008"
+      - "traefik.frontend.rule=Host:synapse.whitehomeio.com"
+      - "traefik.docker.network=web"
+
+    restart: unless-stopped
+
+networks:
+  default:
+    external:
+      name: matrix
+  # Traefiks network
+  web:
+    external: true

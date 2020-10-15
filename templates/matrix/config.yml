@@ -1,0 +1,5 @@
+name: Matrix
+description: |
+    Synapse: Matrix reference homeserver
+version: v1.20.1
+category: Communication

@@ -1,19 +1,25 @@
 version: '2'
 catalog:
-  name: "lidarr"
-  version: "PLACEHOLDER"
-  description: "PLACEHOLDER"
-  uuid: lidarr-0
+  name: "matrix"
+  version: "v2.5.144"
+  description: "A modern, lightweight and powerful wiki app built on NodeJS"
+  uuid: matrix-0
   minimum_rancher_version: v0.56.0
   questions:
     - variable: http_port
-      description: "Public HTTP port to access lidarr's webui."
+      description: "Public HTTP port to access matrix's webui."
       label: "HTTP Port"
       required: true
       default: "3000"
       type: "int"
     - variable: https_port
-      description: "Public HTTP port to access lidarr's webui."
+      description: "Public HTTP port to access matrix's webui."
+      label: "HTTP Port"
+      required: true
+      default: "3000"
+      type: "int"
+    - variable: db_port
+      description: "Public HTTP port to access matrix's webui."
       label: "HTTP Port"
       required: true
       default: "3000"
@@ -30,7 +36,7 @@ catalog:
         - rancher-efs
         - rancher-ebs
 services:
-  lidarr:
+  matrix:
     scale: 1
     retain_ip: true
 #    health_check:
