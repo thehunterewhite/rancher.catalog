@@ -2,7 +2,7 @@
 version: "2"
 services:
   organizr:
-    image: linuxserver/organizr-v2
+    image: organizr/organizr
     container_name: organizr
 
     ports:
