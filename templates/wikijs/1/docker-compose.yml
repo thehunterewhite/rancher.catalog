@@ -1,0 +1,24 @@
+---
+version: "2"
+services:
+  wikijs:
+    image: linuxserver/wikijs
+    container_name: wikijs
+
+    ports:
+      - ${http_port}:3000
+
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ="America/New_York"
+
+    volumes:
+      - testappdata/wikijs/config:/config
+      - testappdata/wikihs/data:/data
+
+    restart: unless-stopped
+
+volumes:
+  testappdata:
+    driver: rancher-nfs
