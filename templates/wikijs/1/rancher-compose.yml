@@ -1,7 +1,7 @@
 version: '2'
 catalog:
   name: "wikijs"
-  version: "v2.5.144"
+  version: "v2"
   description: "A modern, lightweight and powerful wiki app built on NodeJS"
   uuid: wikijs-0
   minimum_rancher_version: v0.56.0
