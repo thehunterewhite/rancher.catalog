@@ -24,7 +24,7 @@ catalog:
         - rancher-efs
         - rancher-ebs
 services:
-  organizr:
+  radarr:
     scale: 1
     retain_ip: true
 #    health_check:
