@@ -18,7 +18,7 @@ catalog:
         - rancher-efs
         - rancher-ebs
 services:
-  radarr:
+  sonarr:
     scale: 1
     retain_ip: true
     health_check:
