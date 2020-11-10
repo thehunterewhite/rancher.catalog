@@ -12,6 +12,6 @@ services:
       - TZ="America/New_York"
     volumes:
       - /home/appdata/sonarr:/config
-      - /media/nova/media/Video/TV Shows:/tv
+      - /media/nova/media/Video/TV\ Shows:/tv
       - /media/nova/contentgateway/process/incoming:/downloads
     restart: unless-stopped
