@@ -2,20 +2,16 @@
 version: "2"
 services:
   radarr:
-    image: linuxserver/radarr
+    image: ghcr.io/linuxserver/radarr
     container_name: radarr
-
     ports:
-      - ${http_port}:4848
-
+      - 4015:7878
     environment:
       - PUID=1000
       - PGID=1000
       - TZ="America/New_York"
-
     volumes:
-      - /home/radarr:/config
+      - /home/appdata/radarr:/config
       - /media/nova/media/Video/Movies:/movies
       - /media/nova/contentgateway/process/Video/Movies:/downloads
-
     restart: unless-stopped
