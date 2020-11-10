@@ -1,16 +1,15 @@
+---
+version: "2"
+services:
   ombi:
-    image: linuxserver/ombi
+    image: ghcr.io/linuxserver/ombi
     container_name: ombi
-
     ports:
       - ${http_port}:3579
-
     environment:
       - PUID=1000
       - PGID=1000
-      - TZ="America/New_York"
-
+      - TZ=America/Chicago
     volumes:
-     - /home/ombi:/config
-
+      - /home/appdata/ombi/config:/config
     restart: unless-stopped
