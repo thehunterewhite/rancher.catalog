@@ -22,7 +22,7 @@ services:
     scale: 1
     retain_ip: true
     health_check:
-      port: 4012
+      port: 3579
       interval: 2000
       initializing_timeout: 60000
       unhealthy_threshold: 3
