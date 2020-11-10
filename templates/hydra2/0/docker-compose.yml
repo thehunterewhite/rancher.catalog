@@ -4,16 +4,12 @@ services:
   hydra2:
     image: linuxserver/hydra2
     container_name: hydra2
-
     ports:
       - 4013:5076
-
     environment:
       - PUID=1000
       - PGID=1000
       - TZ="America/New_York"
-
     volumes:
-      - /home/hydra2:/config
-
+      - /home/appdata/hydra2:/config
     restart: unless-stopped

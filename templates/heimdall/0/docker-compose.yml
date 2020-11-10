@@ -4,13 +4,12 @@ services:
   heimdall:
     image: linuxserver/heimdall
     container_name: heimdall
-
     ports:
-      - ${http_port}:80
-
+      - 4021:80
     environment:
       - PUID=1000
       - PGID=1000
       - TZ="America/New_York"
-
+    volumes:
+      - /home/appdata/heimdall:/config
     restart: unless-stopped
