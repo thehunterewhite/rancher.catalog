@@ -1,0 +1,5 @@
+name: Sonarr
+description: |
+    Smart PVR for newsgroup and bittorrent users.
+version: v2.0
+category: PVR

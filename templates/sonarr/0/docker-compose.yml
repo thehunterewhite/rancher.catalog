@@ -1,17 +1,17 @@
 ---
 version: "2"
 services:
-  radarr:
-    image: ghcr.io/linuxserver/radarr
-    container_name: radarr
+  sonarr:
+    image: linuxserver/sonarr:latest
+    container_name: sonarr
     ports:
-      - 4015:7878
+      - 4016:8989
     environment:
       - PUID=99
       - PGID=100
       - TZ="America/New_York"
     volumes:
-      - /home/appdata/radarr:/config
-      - /media/nova/media/Video/Movies:/movies
+      - /home/appdata/sonarr:/config
+      - /media/nova/media/Video/TVShows:/tv
       - /media/nova/contentgateway/process/incoming:/downloads
     restart: unless-stopped
