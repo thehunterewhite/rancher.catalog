@@ -6,7 +6,7 @@ services:
     container_name: hydra2
 
     ports:
-      - ${http_port}:5076
+      - 4013:5076
 
     environment:
       - PUID=1000
