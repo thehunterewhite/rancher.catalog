@@ -13,5 +13,5 @@ services:
     volumes:
       - /home/appdata/radarr:/config
       - /media/nova/media/Video/Movies:/movies
-      - /media/nova/contentgateway/process/Video/Movies:/downloads
+      - /media/nova/contentgateway/process/incoming:/downloads
     restart: unless-stopped
