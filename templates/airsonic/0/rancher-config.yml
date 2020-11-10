@@ -1,9 +1,9 @@
 version: '2'
 catalog:
-  name: "tautulli"
-  version: "v02658759-ls14"
-  description: "A Python based monitoring and tracking tool for Plex Media Server"
-  uuid: tautulli-0
+  name: "airsonc"
+  version: "v3.0.5202-ls68"
+  description: "SSH token based Virtual Private Network"
+  uuid: airsonic-0
   minimum_rancher_version: v0.56.0
   questions:
     - variable: "volume_driver"
@@ -18,14 +18,16 @@ catalog:
         - rancher-efs
         - rancher-ebs
 services:
-  tautulli:
+  airsonic:
     scale: 1
     retain_ip: true
     health_check:
-      port: 8181
-      interval: 2000
-      initializing_timeout: 60000
-      unhealthy_threshold: 3
-      strategy: recreate
-      healthy_threshold: 2
       response_timeout: 2000
+      healthy_threshold: 2
+      port: 80
+      unhealthy_threshold: 3
+      initializing_timeout: 300000
+      interval: 2000
+      strategy: recreate
+      request_line: GET "/" "HTTP/1.0"
+      reinitializing_timeout: 120000

@@ -6,12 +6,6 @@ catalog:
   uuid: ombi-0
   minimum_rancher_version: v0.56.0
   questions:
-    - variable: http_port
-      description: "Public HTTP port to access ombi's webui."
-      label: "HTTP Port"
-      required: true
-      default: "3000"
-      type: "int"
     - variable: "volume_driver"
       description: "Volume driver to associate with this service."
       label: "Volume Driver"
@@ -28,7 +22,7 @@ services:
     scale: 1
     retain_ip: true
     health_check:
-      port: ${http_port}
+      port: 3579
       interval: 2000
       initializing_timeout: 60000
       unhealthy_threshold: 3

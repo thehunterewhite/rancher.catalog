@@ -1,17 +1,13 @@
   tautulli:
     image: linuxserver/tautulli
     container_name: tautulli
-
     ports:
-      - ${http_port}:8181
-
+      - 4011:8181
     environment:
       - PUID=1000
       - PGID=1000
       - TZ="America/New_York"
-
     volumes:
-      - /home/tautulli:/config
-      - /home/tautulli/logs:/logs
-
+      - /home/appdata/tautulli:/config
+      - /home/appdata/tautulli/logs:/logs
     restart: unless-stopped

@@ -5,7 +5,7 @@ services:
     image: ghcr.io/linuxserver/ombi
     container_name: ombi
     ports:
-      - ${http_port}:3579
+      - 4012:3579
     environment:
       - PUID=1000
       - PGID=1000
