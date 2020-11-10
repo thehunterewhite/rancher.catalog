@@ -4,16 +4,12 @@ services:
   freshrss:
     image: linuxserver/freshrss
     container_name: freshrss
-
     ports:
-     - ${http_port}:80
-
+     - 4000:80
     environment:
       - PUID=1000
       - PGID=1000
       - TZ="America/New_York"
-
     volumes:
-      - /home/freshrss:/config
-      
+      - /home/appdata/freshrss:/config    
     restart: unless-stopped
