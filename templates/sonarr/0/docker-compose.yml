@@ -2,7 +2,7 @@
 version: "2"
 services:
   sonarr:
-    image: ghcr.io/linuxserver/sonarr
+    image: ghcr.io/linuxserver/sonarr:latest
     container_name: sonarr
     ports:
       - 4016:8989
@@ -10,9 +10,8 @@ services:
       - PUID=99
       - PGID=100
       - TZ="America/New_York"
-#      - UMASK_SET=022 #optional
     volumes:
       - /home/appdata/sonarr:/config
       - /media/nova/media/Video/TV Shows:/tv
-      - /media/nova/contentgateway/process/Video/incoming:/downloads
+      - /media/nova/contentgateway/process/incoming:/downloads
     restart: unless-stopped
