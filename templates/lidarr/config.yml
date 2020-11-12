@@ -1,0 +1,5 @@
+name: Lidarr
+description: |
+    Looks and smells like Sonarr but made for music.
+version: v7.2
+category: PVR

@@ -1,0 +1,17 @@
+---
+version: "2"
+services:
+  lidarr:
+    image: ghcr.io/linuxserver/lidarr:nightly
+    container_name: lidarr
+  ports:
+    - 4017:8686
+    environment:
+      - PUID=99
+      - PGID=100
+      - TZ="America/New_York"
+    volumes:
+      - /home/appdata/lidarr:/config
+      - /media/nova/media/Audio/Collection:/music
+      - /media/nova/contentgateway/process/incoming:/downloads
+    restart: unless-stopped
