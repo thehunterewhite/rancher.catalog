@@ -4,8 +4,8 @@ services:
   lidarr:
     image: ghcr.io/linuxserver/lidarr:nightly
     container_name: lidarr
-  ports:
-    - 4017:8686
+    ports:
+      - 4017:8686
     environment:
       - PUID=99
       - PGID=100
