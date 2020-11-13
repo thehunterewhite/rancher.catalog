@@ -1,0 +1,5 @@
+name: Navidrome
+description: |
+    Modern Music Server and Streamer compatible with Subsonic/Airsonic.
+version: v0.37
+category: Media Server
