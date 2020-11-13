@@ -1,7 +1,7 @@
-version: '2.1'
+version: '2'
 catalog:
   name: "sonarr"
-  version: "v2"
+  version: "v2.1"
   description: "Smart PVR for newsgroup and bittorrent users."
   uuid: sonarr-0
   minimum_rancher_version: v0.56.0

@@ -13,5 +13,6 @@ services:
     volumes:
       - /home/appdata/sonarr:/config
       - /media/nova/media/Video/TVShows:/tv
+      - /media/nova/media/Video/Anime:/anime
       - /media/nova/contentgateway/process/incoming:/downloads
     restart: unless-stopped
