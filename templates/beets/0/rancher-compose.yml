@@ -1,0 +1,31 @@
+version: '2'
+catalog:
+  name: "beets"
+  version: "v1.4.9"
+  description: "A music library manager."
+  uuid: beets-0
+  minimum_rancher_version: v0.56.0
+  questions:
+    - variable: "volume_driver"
+      description: "Volume driver to associate with this service."
+      label: "Volume Driver"
+      required: true
+      default: "local"
+      type: enum
+      options: # List of options if using type of `enum`
+        - local
+        - rancher-nfs
+        - rancher-efs
+        - rancher-ebs
+services:
+  beets:
+    scale: 1
+    retain_ip: true
+    health_check:
+      port: 8337
+      interval: 2000
+      initializing_timeout: 60000
+      unhealthy_threshold: 3
+      strategy: recreate
+      healthy_threshold: 2
+      response_timeout: 2000
