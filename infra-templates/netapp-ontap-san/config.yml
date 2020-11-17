@@ -1,0 +1,7 @@
+name: NetApp ONTAP SAN
+description: |
+  Volume plugin for ONTAP SAN
+version: 17.07
+category: Storage
+labels:
+  io.rancher.orchestration.supported: 'cattle'

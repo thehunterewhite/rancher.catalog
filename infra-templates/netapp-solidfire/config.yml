@@ -1,0 +1,7 @@
+name: NetApp SolidFire
+description: |
+  Volume plugin for SolidFire
+version: 17.07
+category: Storage
+labels:
+  io.rancher.orchestration.supported: 'cattle'
