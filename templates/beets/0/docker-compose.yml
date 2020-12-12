@@ -11,7 +11,7 @@ services:
     volumes:
       - /home/appdata/beets/config>:/config
       - /media/nova/media/Audio/Collection:/music
-      - /media/nova/media/Audio/preCollection:/downloads
+      - /media/nova/contentgateway/process/Audio/Music:/downloads
     ports:
       - 4019:8337
     restart: unless-stopped
