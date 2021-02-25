@@ -1,5 +1,0 @@
-name: Wireguard
-description: |
-    SSH token based Virtual Private Network
-version: v1.0.20200827-ls40
-category: VPN
