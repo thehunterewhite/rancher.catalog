@@ -1,0 +1,17 @@
+---
+version: '2'
+services:
+  shaarli:
+    image: shaarli/shaarli:master
+    container_name: shaarli
+    ports:
+      - 3024:80
+    build: ./
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/New_York
+    volumes:
+      - /home/appdata/shaarli/cache:/var/www/shaarli/cache
+      - /home/appdata/shaarli/data:/var/www/shaarli/data
+    restart: unless-stopped

@@ -1,0 +1,5 @@
+name: Shaarli
+description: |
+    The personal, minimalist, super-fast, database free, bookmarking service
+version: v0.12
+category: Frontend
