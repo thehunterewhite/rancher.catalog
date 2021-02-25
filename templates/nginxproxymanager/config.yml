@@ -1,5 +1,5 @@
 name: Nginx Proxy Manager
 description: |
-    Docker container for Nginx Proxy Manager.
+    Docker container for Nginx Proxy Manager
 version: v1.10
 category: Frontend
