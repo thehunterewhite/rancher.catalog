@@ -1,0 +1,5 @@
+name: Ghost
+description: |
+    A free and open source blogging platform written in JavaScript
+version: v3.4
+category: Blog
