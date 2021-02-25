@@ -1,0 +1,5 @@
+name: Homer
+description: |
+    A dead simple static home for your server
+version: v20.12
+category: Frontend

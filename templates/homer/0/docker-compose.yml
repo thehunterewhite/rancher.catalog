@@ -1,0 +1,15 @@
+---
+version: '2'
+services:
+  shaarli:
+    image: b4bz/homer:latest
+    container_name: homer
+    ports:
+      - 3070:8080
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/New_York
+    volumes:
+      - /home/appdata/homer/assets:/www/assets
+    restart: unless-stopped
