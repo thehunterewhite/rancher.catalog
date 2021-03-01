@@ -11,10 +11,10 @@ services:
       - SYMFONY__ENV__DATABASE_USER=wallabag
       - SYMFONY__ENV__DATABASE_PASSWORD=wallapass
       - SYMFONY__ENV__DATABASE_CHARSET=utf8mb4
-      - SYMFONY__ENV__MAILER_HOST=127.0.0.1
-      - SYMFONY__ENV__MAILER_USER=~
-      - SYMFONY__ENV__MAILER_PASSWORD=~
-      - SYMFONY__ENV__FROM_EMAIL=wallabag@whitehome.io
+#      - SYMFONY__ENV__MAILER_HOST=127.0.0.1
+#      - SYMFONY__ENV__MAILER_USER=~
+#      - SYMFONY__ENV__MAILER_PASSWORD=~
+#      - SYMFONY__ENV__FROM_EMAIL=wallabag@whitehome.io
       - SYMFONY__ENV__DOMAIN_NAME=https://wallabag.whitehome.io
       - SYMFONY__ENV__SERVER_NAME="Your wallabag instance"
     ports:
